@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.navbar-item{
+  align-content: right;
+  text-align: right;
+  align-items: right;
+ 
+}
+
+/* ADAPTAMOS NUESTRO PROYECTO A PANTALLAS DE DISTINTO TAMAÑO */
+
+/* VISTA MÓVIL*/
+
+@media only screen and (max-width:599px) {
+    h2 {
+        color: gray;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "seccion seccion"
+            "video video"
+            "text text"
+            "sumate sumate"
+            "fotos fotos"
+            "noticias noticias"
+            "footer footer";
+    }
+
+    .header {
+        background-color: black;
+        height: 100px;
+        width: 100%;
+        grid-area: header;
+    }
+
+    .nav {
+      
+        height: 100px;
+        width: 100%;
+        grid-area: nav;
+    }
+
+    .seccion {
+        background-color: cornflowerblue;
+        height: 400px;
+        width: 100%;
+        grid-area: seccion;
+    }
+    .sumate {
+        background-color: pink;
+        height: 400px;
+        width: 100%;
+        grid-area: seccion;
+    }
+
+
+    .fotos {
+        background-color: #252850;
+        height: 300px;
+        width: 100%;
+        grid-area: fotos;
+    }
+
+    .noticias {
+        background-color: yellowgreen;
+        height: 300px;
+        width: 100%;
+        grid-area: noticias;
+    }
+
+    .footer {
+        background-color: darkolivegreen;
+        height: 200px;
+        width: 100%;
+        grid-area: footer;
+    }
+
+}
+
+
+/* VISTA TABLET*/ 
+
+@media only screen and (min-width:600px) and (max-width:1023px) {
+    h2 {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header header"
+            "circulo circulo"
+            "seccion seccion"
+            "seccion seccion"
+            "nav noticias"
+            "nav fotos"
+            "footer footer";
+    }
+
+    .header {
+        background-color: black;
+        height: 100px;
+        width: 100%;
+        grid-area: header;
+    }
+
+    .nav {
+     
+        height: 100%;
+        width: 100%;
+        grid-area: nav;
+    }
+
+    .seccion {
+        background-color: cornflowerblue;
+        height: 400px;
+        width: 100%;
+        grid-area: seccion;
+    }
+    .text{
+        background-color: cornflowerblue;
+        height: 400px;
+        width: 100%;
+        grid-area: text;
+    }
+    .fotos {
+        background-color: #252850;
+        height: 300px;
+        width: 100%;
+        grid-area: fotos;
+    }
+
+    .noticias {
+        background-color: yellowgreen;
+        height: 300px;
+        width: 100%;
+        grid-area: noticias;
+    }
+
+    .footer {
+        background-color: darkolivegreen;
+        height: 200px;
+        width: 100%;
+        grid-area: footer;
+    }
+
+
+}
+
+/* VISTA ESCRITORIO */
+
+/*@media only screen and (min-width:1024px) { */
+
+
+    .navbar{
+
+        background-color: #3a3a5B;
+      
+        top: 0;
+        left: 0;
+        
+    }
+ 
+ 
+   .nav-link{
+        color: white !important;
+    }
+    .nav-link:hover{
+        color: #c1de68 !important;
+    }
+   
+     h2 {
+         color: white;
+         text-align: center;
+         margin-top: 20px;
+     }
+ .contenedor_flex{
+     background-image: url("imagenes/fondototal.png");
+   
+ }
+     .contenedor {
+         background-image: url("imagenes/fondototal.png");
+         display: grid;
+         position: relative;
+         z-index: -1;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto auto auto;
+         grid-template-areas:
+             "header nav"
+        "circulo circulo"
+        "video video" 
+             "seccion seccion"
+             " fondoPapelFino-verde fondoPapelFino-verde"
+ 
+             "tabl1 tabl1"
+ 
+ "box box"
+             
+             "fondoPapelFino-violet fondoPapelFino-violet"
+ 
+             "opiniones opiniones"
+             "sumate sumate"
+             "intro intro" 
+  "uf uf"
+  "uf2 uf2"
+             "direccion mapa"
+             "footer footer"
+     }
+ 
+        .header {
+         background-color:   #3a3a5B;
+         height: 100px;
+         width: 100%;
+         position: sticky;
+         top: 0;
+         left: 0;
+         padding: 0.7em 0 ;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+         
+     
+         grid-area: header;
+     }
+     
+ 
+     .video {
+         width:100%;
+ 
+         text-align: center;
+ margin-top: 0.2em;
+ 
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+     
+        
+     }
+ .video iframe{
+     height: 400px;
+ }
+ 
+     .fondoPapelFino-verde {
+         width:100%;
+         text-align: center;
+ height: 318px;
+ align-content: space-evenly;
+ 
+ background-image: url("imagenes/verdi.png");
+     
+         grid-area: fondoPapelFino-verde;
+     }
+     .fondoPapelFino-violet {
+         width:100%;
+         text-align: center;
+ margin:  4em 0;
+ height: 318px;
+ align-content: space-evenly;
+ 
+ background-image: url("imagenes/violet.png");
+     
+         grid-area: fondoPapelFino-violet;
+     }
+    .box{
+     display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: box;
+    
+        height: 300px;
+        width: 100%;
+    }
+ 
+     .tabl1{
+ 
+         width: 100%;
+         height: 350px;
+         font-size: 2rem;
+   
+             
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         grid-area: tabl1;
+        
+ 
+     }
+ .tabl1 img{
+     padding: 2em;
+ }
+     
+     
+     
+     .fondoPapelFino-verde h1{
+         text-align: center;    
+         margin: 3em;
+         }
+ 
+         
+     .fondoPapelFino-violet h1{
+         text-align: center;    
+         margin: 3em;
+         } 
+ 
+ .video iframe{
+     width: 900px;;
+ }
+     .nav {
+         background-color:  #3a3a5B;
+         position: sticky;
+         top: 0;
+         left: 0;
+         height: 100px;
+         width: 100%;
+         display: flex;  flex-direction: row; 
+         justify-content: flex-end;        grid-area: nav;
+     }
+     .navbar-brand{
+ margin-left: 3em;
+     }
+ 
+ 
+ 
+     .menu .item a:hover{
+   
+         color: #c1de68;
+       
+       }
+       .menu, ul {
+ 
+         justify-content: right;
+         padding-right: 3em;
+         display: flex;
+         list-style: none ;
+     
+       }
+       .menu .item a{
+ 
+ 
+         color: #fafafa;
+         padding: 0.5em;
+         display: block;
+         text-decoration: none;
+           list-style: none ;
+   
+     
+           margin-right: 0.5em;
+         margin-left: 0.5em;
+         margin-top: 1em;
+      
+       
+       
+       }   
+       .circulo{
+           background: #3a3a56;
+           height: 150px;
+           border-bottom-left-radius:  50%  100% ;
+           border-bottom-right-radius: 50%   100%;
+           color: #c1de68;
+           text-align: center;
+           padding: 1em;
+           grid-area: circulo;
+           
+         }
+  
+       .footer {
+         background-color:  #3a3a5B;
+        height: 200px;
+         width: 100%;
+         grid-area: footer;
+     }
+ .footer .menu{
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+ 
+ 
+ }
+ .circulo {
+     height: 150px;
+     width: 100%;
+     grid-area: circulo;
+     
+ }
+     .seccion {
+         height: 100%;
+         width: 100%;
+         grid-area: seccion;
+         
+     }
+     .fondo_Titulos{
+         height: 317px;
+         width: 100%;
+         grid-area: sumate;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+     
+     }
+     .columnas_Met{
+         display: flex;
+    flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+     text-align: center;
+     align-items: center;
+    
+ 
+     }
+    
+    .papel_Viol{
+        background-image: url("imagenes/violet.png");
+        color: #fafafa;
+    }
+     .viol{
+         background-image: url("imagenes/cuadraviol.png");
+         height: 198px;
+         width: 1204px;   
+         margin: 4em 2em 6em 2em;
+ 
+     padding: 2em;
+ 
+     }
+  
+ 
+ .verde_met{
+     background-image: url("imagenes/verde.png");
+     height: 198px;
+     width: 1204px; 
+     margin: 0em 2em 2em 2em;
+ 
+     padding: 2em;
+ }
+ 
+ 
+ 
+     .amari{
+         background-image: url("imagenes/amari.png");
+   
+     }
+ .sumate{
+     background-image: url("imagenes/fonfo.png");
+     height: 317px;
+     width: 100%;
+     grid-area: sumate;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+ 
+ }
+ .sumate_am{
+     background-image: url("imagenes/sumateam.png");
+     height: 317px;
+     width: 100%;
+     grid-area: sumate;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+ 
+ }
+     .intro {
+         height: 400px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+         grid-area: intro;
+         
+     }
+ 
+     .uf2 {
+         background: linear-gradient(to bottom,   transparent ,#3a3a5B);
+ 
+         height: 400px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+         grid-area: uf2;
+  
+         
+     }
+     .uf {
+         background-image: url("imagenes/nuevo.png");
+ 
+         height: 559px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+         grid-area: uf;
+  
+         
+     }
+     .violet{
+         width: 100%;
+         height: 400px;
+         display: flex;
+         /* flex-direction: row; Row es el valor por defecto */
+         /* flex-wrap: wrap; */
+   margin: 3em;     
+     }
+ 
+  
+ 
+     .noticias p {
+         width: 100%;
+ color: whitesmoke;
+     height: 200px;
+  justify-content: left;
+         text-align: center;
+         align-items: center;
+         
+     
+     }
+ 
+     .dropdown-item{
+        position: relative;
+        z-index: 1;
+     }
+     #carouselExampleSlidesOnly{
+         position: relative;
+         z-index: -1;
+         height: 100%;
+            width: 100%;
+            -webkit-box-shadow: 0px -12px 49px -19px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px -12px 49px -19px rgba(0,0,0,0.75);
+        box-shadow: 0px -12px 49px -19px rgba(0,0,0,0.75);
+          
+          }
+         
+     .direccion {
+         height: 500px;
+         width: 100%;
+         grid-area: direccion
+         ;
+     }
+ 
+     .mapa {
+         height: 500px;
+         width: 100%;
+         grid-area: mapa;
+     }
+ .cont{
+     display: flex;
+     flex-wrap: wrap;
+     float:left;
+     width: 100%;
+     justify-content:  space-evenly;
+ 
+     
+ 
+ }
+ 
+ .columnas{
+     width: 300px;
+     margin-left: 5em;
+     margin-bottom: 4em;
+ }
+ .globo{
+     display: flex;     
+     flex-direction: column; 
+     justify-content: space-around;
+     height: 200px;
+  color: #fafafa;
+ }
+ .contactus_{
+     
+     border-radius: 20px;
+ align-items: center;
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ 
+         height:35px;
+         width: 150px;
+         border-radius: 20px 20px;
+         border-color:gray;
+       background-color: #3a3a56;
+       margin-top: -8em;
+ }
+ .contactus_ a:hover{
+     color: #c1de68;
+ }
+ .contactus_ a{
+     text-decoration: none;
+ color: #fafafa;
+ }
+ .cuadrado_Ama{
+     background-image: url("imagenes/back.png");
+     width:406px ;
+     height:681px ;
+ margin-bottom: 3em;
+ }
+ .cuadrado_Ama ol{
+     width:406px ;
+     height:681px ;
+     margin-top: 3em;
+     margin-left: 2em;
+ 
+ 
+ }
+ .grupo_Precios{
+ 
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     justify-content:  space-evenly;
+ 
+ }
+ 
+ .verde{
+     background-image: url("imagenes/verdi.png");
+ 
+ }
+ .Precios{
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+    justify-content:  space-evenly;
+ 
+ 
+ }
+ 
+ .Precios img{
+     margin: 2.5em;
+ 
+ }
+ 
+ 
+     .op:hover, .globo:hover{
+         transition: transform .2s;
+ 
+         transform:  scale(1.1);
+         }  
+         
+         .op{
+ padding-top: 5em;
+ padding-bottom: 5em;
+         }
+         .cv{
+             padding: 6em;
+             margin: 3em;
+            border: 2px solid gray;
+            border-radius: 70px;
+     
+ 
+         }
+ 
+         .cv p{
+        
+     
+           margin-left: 2em;
+           margin-right: 2em;
+         }
+           .fotoProfe{
+             float: left;
+             padding-top:3em;
+             padding-bottom: 3em;
+             padding-right: 3em;
+           }
+           .cv h1{
+               color: gray; 
+               justify-content: center;
+             
+         text-align: center;
+         align-items: center;
+           }
+   
+     
+ .formularioTexto{
+   
+ border-radius: 70px;
+ border: 2px solid gray;
+ width: 700px;
+ padding: 3em;
+ 
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ }
+ .fondo_Form{
+   background: linear-gradient(to bottom  , transparent, #3a3a5B);
+ }
+ 
+ .formularioTexto label, input, select{
+     margin: 0.5em;
+ }
+ 
+ .form_bot:hover{
+     color: #c1de68;
+ }
+ .form_bot{
+     text-decoration: none;
+ color: #fafafa;
+ background-color: #3a3a5B;
+ border-radius: 40px;
+ height: 50px;
+ width: 150px;
+ margin-top: 3em;
+ 
+ }
+    
